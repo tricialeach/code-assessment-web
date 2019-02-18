@@ -11,6 +11,7 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
         price={product.price}
         quantity={product.quantity}
         key={product.id}
+        isCartProduct={true}
       />
     )
   ) : (
