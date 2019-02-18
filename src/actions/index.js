@@ -23,6 +23,10 @@ export const addToCart = productId => (dispatch, getState) => {
   }
 }
 
+export const removeFromCart = (productId) => {
+  console.log(productId, 'item removed')
+}
+
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
 

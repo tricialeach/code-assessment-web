@@ -7,6 +7,7 @@ const Cart  = ({ products, total, onCheckoutClicked }) => {
   const nodes = hasProducts ? (
     products.map(product =>
       <Product
+        productId={product.id}
         title={product.title}
         price={product.price}
         quantity={product.quantity}

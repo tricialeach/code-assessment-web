@@ -1,7 +1,10 @@
 import React from 'react'
 
-const RemoveButton = () => (
-  <a href="">Remove</a>
+const RemoveButton = ({onRemoveItemClicked}) => (
+  <button
+    onClick={onRemoveItemClicked}>
+    Remove
+  </button>
 )
 
 export default RemoveButton
