@@ -18,7 +18,7 @@ const addedIds = (state = initialState.addedIds, action) => {
       }
       return [ ...state, action.productId ]
     case REMOVE_FROM_CART:
-      return console.log('addedIds reducer')
+      return state.filter(item => item !== action.productId)
     default:
       return state
   }
@@ -32,7 +32,9 @@ const quantityById = (state = initialState.quantityById, action) => {
         [productId]: (state[productId] || 0) + 1
       }
     case REMOVE_FROM_CART:
-      return console.log('quantityById reducer')
+      let newState = Object.assign({}, state, {})
+      delete newState[action.productId]
+      return newState
     default:
       return state
   }

@@ -38,7 +38,6 @@ const mapStateToProps = (state) => ({
   total: getTotal(state)
 })
 
-export default connect(
-  mapStateToProps,
-  { checkout }
+export default connect(mapStateToProps,
+  { checkout, removeFromCart }
 )(CartContainer)
