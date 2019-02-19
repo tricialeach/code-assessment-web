@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import RemoveButton from './RemoveButton'
-import { removeFromCart } from '../actions'
 
-const Product = ({ productId, price, inventory, title, isCartProduct }) => (
+const Product = ({ price, inventory, title }) => (
   <div>
     <h4>
       {title}
@@ -11,7 +9,6 @@ const Product = ({ productId, price, inventory, title, isCartProduct }) => (
     <h5>
       &#36;{price}{inventory ? ` x ${inventory}` : null}
     </h5>
-    {isCartProduct ? <RemoveButton onRemoveItemClicked={() => removeFromCart(productId)}/> : null}
   </div>
 )
 

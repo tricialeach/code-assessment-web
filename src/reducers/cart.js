@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  REMOVE_FROM_CART,
   CHECKOUT_REQUEST,
   CHECKOUT_FAILURE
 } from '../constants/ActionTypes'
@@ -16,6 +17,8 @@ const addedIds = (state = initialState.addedIds, action) => {
         return state
       }
       return [ ...state, action.productId ]
+    case REMOVE_FROM_CART:
+      return console.log('addedIds reducer')
     default:
       return state
   }
@@ -28,6 +31,8 @@ const quantityById = (state = initialState.quantityById, action) => {
       return { ...state,
         [productId]: (state[productId] || 0) + 1
       }
+    case REMOVE_FROM_CART:
+      return console.log('quantityById reducer')
     default:
       return state
   }
