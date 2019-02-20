@@ -1,62 +1,89 @@
-@mixin chivo () {
-  font-family: 'Chivo', sans-serif;
-}
+// TYPEFACES
 
-@mixin chivo-light () {
-  font-family: 'Chivo Light', sans-serif;
-}
-
-@mixin chivo-bold () {
-  font-family: 'Chivo Bold', sans-serif;
-}
-
-@mixin helvetica-neue () {
-  font-family: 'Helvetica Neue', sans-serif;
-}
+@mixin chivo() { font-family: 'Chivo', sans-serif; }
+@mixin chivo-light() { font-family: 'Chivo Light', sans-serif; }
+@mixin chivo-bold() { font-family: 'Chivo Bold', sans-serif; }
+@mixin helvetica-neue() { font-family: 'Helvetica Neue', sans-serif; }
 
 .txt-chivo { @include chivo(); } 
 .txt-chivo-light { @include chivo-light(); } 
 .txt-chivo-bold { @include chivo-bold(); } 
 .txt-helvetica-neue { @include helvetica-neue();}
 
-.txt-size-1 { font-size: $txt-size-sm1; }
-.txt-size-2 { font-size: $txt-size-sm2; }
-.txt-size-3 { font-size: $txt-size-sm3; }
-.txt-size-4 { font-size: $txt-size-sm4; }
-.txt-size-5 { font-size: $txt-size-sm5; }
-.txt-size-6 { font-size: $txt-size-sm6; }
+// SIZES
 
-@include mq-md() {
-  .txt-size-1 { font-size: $txt-size-md1; }
-  .txt-size-2 { font-size: $txt-size-md2; }
-  .txt-size-3 { font-size: $txt-size-md3; }
-  .txt-size-4 { font-size: $txt-size-md4; }
-  .txt-size-5 { font-size: $txt-size-md5; }
-  .txt-size-6 { font-size: $txt-size-md6; }
+@mixin txt-size-1() {
+  font-size: $txt-size-sm1;
+  @include mq-md() { font-size: $txt-size-md1; }
+  @include mq-lg() { font-size: $txt-size-lg1; }
 }
 
-@include mq-lg() {
-  .txt-size-1 { font-size: $txt-size-lg1; }
-  .txt-size-2 { font-size: $txt-size-lg2; }
-  .txt-size-3 { font-size: $txt-size-lg3; }
-  .txt-size-4 { font-size: $txt-size-lg4; }
-  .txt-size-5 { font-size: $txt-size-lg5; }
-  .txt-size-6 { font-size: $txt-size-lg6; }
+@mixin txt-size-2() {
+  font-size: $txt-size-sm2;
+  @include mq-md() { font-size: $txt-size-md2; }
+  @include mq-lg() { font-size: $txt-size-lg2; }
 }
 
-.txt-white { color: $white; }
-.txt-blue { color: $blue; }
-.txt-gray { color: $gray; }
-.txt-light-gray { color: $light-gray; }
-.txt-warning { color: $color-warning; }
+@mixin txt-size-3() {
+  font-size: $txt-size-sm3;
+  @include mq-md() { font-size: $txt-size-md3; }
+  @include mq-lg() { font-size: $txt-size-lg3; }
+}
+
+@mixin txt-size-4() {
+  font-size: $txt-size-sm4;
+  @include mq-md() { font-size: $txt-size-md4; }
+  @include mq-lg() { font-size: $txt-size-lg4; }
+}
+
+@mixin txt-size-5() {
+  font-size: $txt-size-sm5;
+  @include mq-md() { font-size: $txt-size-md5; }
+  @include mq-lg() { font-size: $txt-size-lg5; }
+}
+
+@mixin txt-size-6() {
+  font-size: $txt-size-sm6;
+  @include mq-md() { font-size: $txt-size-md6; }
+  @include mq-lg() { font-size: $txt-size-lg6; }
+}
+
+.txt-size-1 { @include txt-size-1(); }
+.txt-size-2 { @include txt-size-2(); }
+.txt-size-3 { @include txt-size-3(); }
+.txt-size-4 { @include txt-size-4(); }
+.txt-size-5 { @include txt-size-5(); }
+.txt-size-6 { @include txt-size-6(); }
+
+// COLORS
+
+@mixin txt-white() { color: $white; }
+@mixin txt-blue() { color: $blue; }
+@mixin txt-gray() { color: $gray; }
+@mixin txt-light-gray() { color: $light-gray; }
+@mixin txt-warning() { color: $color-warning; }
+
+.txt-white { @include txt-white(); }
+.txt-blue { @include txt-blue(); }
+.txt-gray { @include txt-gray(); }
+.txt-light-gray { @include txt-light-gray(); }
+.txt-warning { @include txt-warning(); }
+
+// WEIGHTS
 
 .txt-light { font-weight: 300; }
 .txt-bold { font-weight: 700; }
 
+// TRANSFORMS
+
 .txt-uppercase { text-transform: uppercase; }
 .txt-capitalize { text-transform: capitalize; }
+
+// MISC HELPERS
 
 .txt-no-underline,
 a.txt-no-underline {
   text-decoration: none;
 }
+
+.txt-center { text-align: center; }
