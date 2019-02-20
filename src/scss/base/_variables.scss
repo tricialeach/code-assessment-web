@@ -5,7 +5,8 @@ $black: rgba(41,41,41,1);
 $gray: rgba(155,155,155,1);
 $light-gray: rgba(245,245,245,1);
 $lightest-gray: rgba(249,249,249,1);
-$gray-opacity: rgba(9,9,9,.09);
+$gray-border-color: rgba(216,216,216,1);
+$gray-bg-color: rgba(220,222,224,1);
 
 $dark-blue: rgba(64,127,192,1);
 $blue: rgba(94,151,209,1);
@@ -51,3 +52,7 @@ $slow: 0.4s;
 $regular: 0.25s;
 $fast: 0.175s;
 $link-transition: all $regular linear;
+
+// BORDERS
+$gray-border: 1px solid $gray-border-color
+
