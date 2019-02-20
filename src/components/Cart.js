@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/style.css';
 
-const Cart  = ({ products, total, onCheckoutClicked, children }) => {
+const Cart  = ({ products, total, onCheckoutClicked, children, onCartCloseClicked }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     <div>
@@ -25,6 +25,9 @@ const Cart  = ({ products, total, onCheckoutClicked, children }) => {
   return (
     <div className="cart-wrapper">
       <div className="cart-contents">
+        <svg 
+          onClick={onCartCloseClicked}
+          className="cart-close-icon" id="cart-close-icon" data-name="Close Cart" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><title>close-x</title><g id="v2"><g id="Desktop-Copy-2"><g id="Group"><path id="Line-3" d="M1.714,1.714,30.658,30.658" fill="none" stroke="#9b9b9b"/><path id="Line-3-2" data-name="Line-3" d="M29,2,1,31" fill="none" stroke="#9b9b9b" /></g></g></g></svg>
         <h2 className="cart-header txt-chivo-bold txt-size-5">Your cart</h2>
         <div>{nodes}</div>
       </div>

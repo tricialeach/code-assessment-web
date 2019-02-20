@@ -5,16 +5,18 @@ import { checkout } from '../actions'
 import { removeFromCart } from '../actions'
 import { incrementQuantity } from '../actions'
 import { decrementQuantity } from '../actions'
+import { displayCart } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Cart from '../components/Cart'
 import CartItem from '../components/CartItem'
 import '../styles/style.css';
 
-const CartContainer = ({ products, total, checkout, removeFromCart, incrementQuantity, decrementQuantity }) => (
+const CartContainer = ({ products, total, checkout, removeFromCart, incrementQuantity, decrementQuantity, displayCart }) => (
   <Cart
     products={products}
     total={total}
-    onCheckoutClicked={() => checkout(products)}>
+    onCheckoutClicked={() => checkout(products)}
+    onCartCloseClicked={() => displayCart()}>
       {products.map(product =>
         <CartItem
           key={product.id}
@@ -45,5 +47,5 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps,
-  { checkout, removeFromCart, incrementQuantity, decrementQuantity }
+  { checkout, removeFromCart, incrementQuantity, decrementQuantity, displayCart }
 )(CartContainer)
