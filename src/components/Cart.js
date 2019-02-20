@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/style.css';
 
-const Cart  = ({ products, total, onCheckoutClicked, children, onCartCloseClicked }) => {
+const Cart  = ({ products, total, onCheckoutClicked, children, onCartCloseClicked, isActive }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
     <div>
@@ -23,7 +23,7 @@ const Cart  = ({ products, total, onCheckoutClicked, children, onCartCloseClicke
   )
 
   return (
-    <div className="cart-wrapper">
+    <div className={"cart-wrapper" + (isActive ? ' cart-active' : '')}>
       <div className="cart-contents">
         <svg 
           onClick={onCartCloseClicked}
