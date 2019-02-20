@@ -1,20 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Product from './Product'
+import ProductImage from './ProductImage'
 import '../styles/style.css';
 
 const ProductItem = ({ product, onAddToCartClicked }) => (
-  <div style={{ marginBottom: 20 }}>
-    <Product
-      title={product.productTitle}
-      price={product.price.value}
-      inventory={product.inventory} />
-    <button
-      className="btn"
-      onClick={onAddToCartClicked}
-      disabled={product.inventory > 0 ? '' : 'disabled'}>
-      {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
-    </button>
+  <div className="product-wrapper">
+    <ProductImage title={product.productTitle} />
+    <div className="product-details-wrapper">
+      <Product
+        title={product.productTitle}
+        price={product.price.value}
+        inventory={product.inventory} />
+      <div>
+        <button
+          className="btn"
+          onClick={onAddToCartClicked}
+          disabled={product.inventory > 0 ? '' : 'disabled'}>
+          {product.inventory > 0 ? 'Add to cart' : 'Sold Out'}
+        </button>
+      </div>
+    </div>
   </div>
 )
 

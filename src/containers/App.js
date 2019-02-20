@@ -4,10 +4,14 @@ import CartContainer from './CartContainer'
 import '../styles/style.css';
 
 const App = () => (
-  <div>
-    <h1 className="txt-chivo txt-size-6">Acme Store</h1>
-    <ProductsContainer />
-    <CartContainer />
+  <div className="container">
+    <header className="header">
+      <h1 className="txt-chivo-bold txt-size-6">Acme Store</h1>
+    </header>
+    <main>
+      <ProductsContainer />
+      <CartContainer />
+    </main>
   </div>
 )
 

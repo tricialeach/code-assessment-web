@@ -1,0 +1,21 @@
+.product-wrapper {
+  background-color: $white;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.product-details-wrapper {
+  width: 100%;
+  padding: 30px 60px 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}

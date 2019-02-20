@@ -10,10 +10,19 @@
 
 @import 'helpers/helpers';
 
+@import 'components/header';
+@import 'components/product';
 @import 'components/buttons';
 
 body {
   background-color: $light-gray;
   color: $black;
   @include helvetica-neue();
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 70px;
 }

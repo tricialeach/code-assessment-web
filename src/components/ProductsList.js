@@ -2,15 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/style.css';
 
-const ProductsList = ({ title, children }) => (
+const ProductsList = ({ children }) => (
   <div>
     <div>{children}</div>
   </div>
 )
 
 ProductsList.propTypes = {
-  children: PropTypes.node,
-  title: PropTypes.string.isRequired
+  children: PropTypes.node
 }
 
 export default ProductsList
