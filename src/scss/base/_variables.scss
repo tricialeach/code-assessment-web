@@ -1,3 +1,6 @@
+// COLORS
+
+$white: rgba(255,255,255,1);
 $black: rgba(41,41,41,1);
 $gray: rgba(155,155,155,1);
 $light-gray: rgba(245,245,245,1);
@@ -6,12 +9,17 @@ $gray-opacity: rgba(9,9,9,.09);
 
 $dark-blue: rgba(64,127,192,1);
 $blue: rgba(94,151,209,1);
+$blue-disabled: rgba(94,151,209,.4);
 $color-warning: rgba(204,29,57,1);
+
+// BREAKPOINTS
 
 $sm: 599px;
 $md: 600px;
 $lg: 900px;
 $xl: 1280px;
+
+// FONT SIZES
 
 // phone
 $txt-size-sm1: 12px; // small text
@@ -36,3 +44,10 @@ $txt-size-lg3: 16px; // base size (not used)
 $txt-size-lg4: 21px; // price
 $txt-size-lg5: 38px; // headline
 $txt-size-lg6: 51px; // lg headline
+
+// TRANSITIONS
+
+$slow: 0.4s;
+$regular: 0.25s;
+$fast: 0.175s;
+$link-transition: all $regular linear;

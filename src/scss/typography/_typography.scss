@@ -2,11 +2,21 @@
   font-family: 'Chivo', sans-serif;
 }
 
+@mixin chivo-light () {
+  font-family: 'Chivo Light', sans-serif;
+}
+
+@mixin chivo-bold () {
+  font-family: 'Chivo Bold', sans-serif;
+}
+
 @mixin helvetica-neue () {
   font-family: 'Helvetica Neue', sans-serif;
 }
 
 .txt-chivo { @include chivo(); } 
+.txt-chivo-light { @include chivo-light(); } 
+.txt-chivo-bold { @include chivo-bold(); } 
 .txt-helvetica-neue { @include helvetica-neue();}
 
 .txt-size-1 { font-size: $txt-size-sm1; }
@@ -34,6 +44,7 @@
   .txt-size-6 { font-size: $txt-size-lg6; }
 }
 
+.txt-white { color: $white; }
 .txt-blue { color: $blue; }
 .txt-gray { color: $gray; }
 .txt-light-gray { color: $light-gray; }
