@@ -1,5 +1,6 @@
 import React from 'react'
 import Product from './Product'
+import '../styles/style.css';
 
 const CartItem = ({ product, onRemoveItemClicked, onIncrementClicked, onDecrementClicked }) => {
   const hasInventory = product.inventory > 0 ? true : false

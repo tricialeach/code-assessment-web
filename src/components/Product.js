@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../styles/style.css';
 
 const Product = ({ price, inventory, title }) => (
   <div>

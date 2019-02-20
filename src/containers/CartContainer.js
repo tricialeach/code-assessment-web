@@ -8,7 +8,7 @@ import { decrementQuantity } from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Cart from '../components/Cart'
 import CartItem from '../components/CartItem'
-
+import '../styles/style.css';
 
 const CartContainer = ({ products, total, checkout, removeFromCart, incrementQuantity, decrementQuantity }) => (
   <Cart
