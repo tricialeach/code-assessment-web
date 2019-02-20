@@ -5,17 +5,24 @@ import { addToCart } from '../actions'
 import { getVisibleProducts } from '../reducers/products'
 import ProductItem from '../components/ProductItem'
 import ProductsList from '../components/ProductsList'
+import Header from '../components/Header'
 import '../styles/style.css';
 
-const ProductsContainer = ({ products, addToCart }) => (
-  <ProductsList>
-    {products.map(product =>
-      <ProductItem
-        key={product.id}
-        product={product}
-        onAddToCartClicked={() => addToCart(product.id)} />
-    )}
-  </ProductsList>
+const ProductsContainer = ({ products, addToCart, cart }) => (
+  <main>
+    <Header
+      cart={cart}
+      title={'Acme Store'} >
+    </Header>
+    <ProductsList>
+      {products.map(product =>
+        <ProductItem
+          key={product.id}
+          product={product}
+          onAddToCartClicked={() => addToCart(product.id)} />
+      )}
+    </ProductsList>
+  </main>
 )
 
 ProductsContainer.propTypes = {
@@ -31,7 +38,8 @@ ProductsContainer.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  products: getVisibleProducts(state.products)
+  products: getVisibleProducts(state.products),
+  cart: state.cart
 })
 
 export default connect(
