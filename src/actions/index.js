@@ -1,15 +1,21 @@
 import shop from '../api/shop'
 import * as types from '../constants/ActionTypes'
 
-const receiveProducts = products => ({
-  type: types.RECEIVE_PRODUCTS,
-  products: products
-})
+export let originalProducts = []
+
+export const receiveProducts = () => {
+  return async function(dispatch) {
+    const res = await fetch('http://tech.work.co/shopping-cart/products.json')
+    const newProducts = await res.json()
+    return dispatch({
+      type: types.RECEIVE_PRODUCTS,
+      products: newProducts
+    })
+  }
+}
 
 export const getAllProducts = () => dispatch => {
-  shop.getProducts(products => {
-    dispatch(receiveProducts(products))
-  })
+  dispatch(receiveProducts())
 }
 
 const addToCartUnsafe = productId => ({
@@ -23,13 +29,15 @@ export const addToCart = productId => (dispatch, getState) => {
   }
 }
 
-const removeItemFromCart = productId => ({
+const removeItemFromCart = (productId, cartQuantity) => ({
   type: types.REMOVE_FROM_CART,
-  productId
+  productId,
+  cartQuantity
 })
 
-export const removeFromCart = productId => (dispatch) => {
-  dispatch(removeItemFromCart(productId))
+export const removeFromCart = productId => (dispatch, getState) => {
+  const cartQuantity = getState().cart.quantityById[productId]
+  dispatch(removeItemFromCart(productId, cartQuantity))
 }
 
 const incrementQuantityInCart = productId => ({
