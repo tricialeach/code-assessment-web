@@ -5,10 +5,8 @@ import '../styles/style.css';
 
 const App = () => (
   <div>
-    <h2>Shopping Cart Example</h2>
-    <hr/>
+    <h1>Acme Store</h1>
     <ProductsContainer />
-    <hr/>
     <CartContainer />
   </div>
 )

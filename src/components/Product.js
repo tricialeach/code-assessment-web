@@ -4,12 +4,16 @@ import '../styles/style.css';
 
 const Product = ({ price, inventory, title }) => (
   <div>
-    <h4>
+    <img src="http://placekitten.com/450/275" />
+    <h2>
       {title}
+    </h2>
+    <h3>
+      &#36;{price}
+    </h3>
+    <h4>
+      {inventory ? `${inventory} Remaining` : null}
     </h4>
-    <h5>
-      &#36;{price}{inventory ? ` x ${inventory}` : null}
-    </h5>
   </div>
 )
 

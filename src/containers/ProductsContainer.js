@@ -8,7 +8,7 @@ import ProductsList from '../components/ProductsList'
 import '../styles/style.css';
 
 const ProductsContainer = ({ products, addToCart }) => (
-  <ProductsList title="Products">
+  <ProductsList>
     {products.map(product =>
       <ProductItem
         key={product.id}

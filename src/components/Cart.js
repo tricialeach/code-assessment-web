@@ -11,10 +11,12 @@ const Cart  = ({ products, total, onCheckoutClicked, children }) => {
   )
 
   return (
-    <div>
-      <h3>Your Cart</h3>
+    <div className="hide">
+      <h2>Your cart</h2>
       <div>{nodes}</div>
       <div>{children}</div>
+      <p>Subtotal: &#36;{total}</p>
+      <p>Taxes: TBD</p>
       <p>Total: &#36;{total}</p>
       <button onClick={onCheckoutClicked}
         disabled={hasProducts ? '' : 'disabled'}>
