@@ -5,7 +5,7 @@ import '../styles/style.css';
 
 const App = () => (
   <div>
-    <h1>Acme Store</h1>
+    <h1 className="txt-chivo txt-size-6">Acme Store</h1>
     <ProductsContainer />
     <CartContainer />
   </div>

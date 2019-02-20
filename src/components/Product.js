@@ -5,13 +5,13 @@ import '../styles/style.css';
 const Product = ({ price, inventory, title }) => (
   <div>
     <img src="http://placekitten.com/450/275" />
-    <h2>
+    <h2 className="txt-chivo txt-size-5">
       {title}
     </h2>
-    <h3>
+    <h3 className="txt-chivo-light txt-size-4 txt-light">
       &#36;{price}
     </h3>
-    <h4>
+    <h4 className="txt-size-1 txt-gray txt-uppercase">
       {inventory ? `${inventory} Remaining` : null}
     </h4>
   </div>
