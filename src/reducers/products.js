@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { RECEIVE_PRODUCTS, ADD_TO_CART, REMOVE_FROM_CART, INCREMENT_QUANTITY, DECREMENT_QUANTITY, GET_NEW_PRODUCTS } from '../constants/ActionTypes'
+import { RECEIVE_PRODUCTS, ADD_TO_CART, REMOVE_FROM_CART, INCREMENT_QUANTITY, DECREMENT_QUANTITY } from '../constants/ActionTypes'
 import _products from '../api/products.json'
 
 const products = (state, action) => {
@@ -33,7 +33,7 @@ const products = (state, action) => {
 
 const byId = (state = {}, action) => {
   switch (action.type) {
-    case GET_NEW_PRODUCTS:
+    case RECEIVE_PRODUCTS:
       return {
         ...state,
         ...action.products.reduce((obj, product) => {
@@ -55,7 +55,7 @@ const byId = (state = {}, action) => {
 
 const visibleIds = (state = [], action) => {
   switch (action.type) {
-    case GET_NEW_PRODUCTS:
+    case RECEIVE_PRODUCTS:
       return action.products.map(product => product.id)
     default:
       return state
