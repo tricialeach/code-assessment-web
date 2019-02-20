@@ -1,0 +1,51 @@
+@mixin chivo () {
+  font-family: 'Chivo', sans-serif;
+}
+
+@mixin helvetica-neue () {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.txt-chivo { @include chivo(); } 
+.txt-helvetica-neue { @include helvetica-neue();}
+
+.txt-size-1 { font-size: $txt-size-sm1; }
+.txt-size-2 { font-size: $txt-size-sm2; }
+.txt-size-3 { font-size: $txt-size-sm3; }
+.txt-size-4 { font-size: $txt-size-sm4; }
+.txt-size-5 { font-size: $txt-size-sm5; }
+.txt-size-6 { font-size: $txt-size-sm6; }
+
+@include mq-md() {
+  .txt-size-1 { font-size: $txt-size-md1; }
+  .txt-size-2 { font-size: $txt-size-md2; }
+  .txt-size-3 { font-size: $txt-size-md3; }
+  .txt-size-4 { font-size: $txt-size-md4; }
+  .txt-size-5 { font-size: $txt-size-md5; }
+  .txt-size-6 { font-size: $txt-size-md6; }
+}
+
+@include mq-lg() {
+  .txt-size-1 { font-size: $txt-size-lg1; }
+  .txt-size-2 { font-size: $txt-size-lg2; }
+  .txt-size-3 { font-size: $txt-size-lg3; }
+  .txt-size-4 { font-size: $txt-size-lg4; }
+  .txt-size-5 { font-size: $txt-size-lg5; }
+  .txt-size-6 { font-size: $txt-size-lg6; }
+}
+
+.txt-blue { color: $blue; }
+.txt-gray { color: $gray; }
+.txt-light-gray { color: $light-gray; }
+.txt-warning { color: $color-warning; }
+
+.txt-light { font-weight: 300; }
+.txt-bold { font-weight: 700; }
+
+.txt-uppercase { text-transform: uppercase; }
+.txt-capitalize { text-transform: capitalize; }
+
+.txt-no-underline,
+a.txt-no-underline {
+  text-decoration: none;
+}

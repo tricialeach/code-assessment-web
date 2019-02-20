@@ -1,0 +1,135 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* END RESET */
+.txt-chivo {
+  font-family: 'Chivo', sans-serif; }
+
+.txt-helvetica-neue {
+  font-family: 'Helvetica Neue', sans-serif; }
+
+.txt-size-1 {
+  font-size: 12px; }
+
+.txt-size-2 {
+  font-size: 13px; }
+
+.txt-size-3 {
+  font-size: 14px; }
+
+.txt-size-4 {
+  font-size: 16px; }
+
+.txt-size-5 {
+  font-size: 21px; }
+
+.txt-size-6 {
+  font-size: 28px; }
+
+@media (min-width: 600px) {
+  .txt-size-1 {
+    font-size: 12px; }
+  .txt-size-2 {
+    font-size: 14px; }
+  .txt-size-3 {
+    font-size: 16px; }
+  .txt-size-4 {
+    font-size: 21px; }
+  .txt-size-5 {
+    font-size: 28px; }
+  .txt-size-6 {
+    font-size: 38px; } }
+
+@media (min-width: 900px) {
+  .txt-size-1 {
+    font-size: 13px; }
+  .txt-size-2 {
+    font-size: 14px; }
+  .txt-size-3 {
+    font-size: 16px; }
+  .txt-size-4 {
+    font-size: 21px; }
+  .txt-size-5 {
+    font-size: 38px; }
+  .txt-size-6 {
+    font-size: 51px; } }
+
+.txt-blue {
+  color: #5e97d1; }
+
+.txt-gray {
+  color: #9b9b9b; }
+
+.txt-light-gray {
+  color: whitesmoke; }
+
+.txt-warning {
+  color: #cc1d39; }
+
+.txt-light {
+  font-weight: 300; }
+
+.txt-bold {
+  font-weight: 700; }
+
+.txt-uppercase {
+  text-transform: uppercase; }
+
+.txt-capitalize {
+  text-transform: capitalize; }
+
+.txt-no-underline,
+a.txt-no-underline {
+  text-decoration: none; }
+
+.hide {
+  display: none; }
+
+body {
+  background-color: whitesmoke;
+  color: #292929;
+  font-family: 'Helvetica Neue', sans-serif; }

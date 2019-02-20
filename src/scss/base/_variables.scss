@@ -1,0 +1,38 @@
+$black: rgba(41,41,41,1);
+$gray: rgba(155,155,155,1);
+$light-gray: rgba(245,245,245,1);
+$lightest-gray: rgba(249,249,249,1);
+$gray-opacity: rgba(9,9,9,.09);
+
+$dark-blue: rgba(64,127,192,1);
+$blue: rgba(94,151,209,1);
+$color-warning: rgba(204,29,57,1);
+
+$sm: 599px;
+$md: 600px;
+$lg: 900px;
+$xl: 1280px;
+
+// phone
+$txt-size-sm1: 12px; // small text
+$txt-size-sm2: 13px; // button
+$txt-size-sm3: 14px; // base size
+$txt-size-sm4: 16px; // price
+$txt-size-sm5: 21px; // headline
+$txt-size-sm6: 28px; // lg headline
+
+// tablet
+$txt-size-md1: 12px; // small text
+$txt-size-md2: 14px; // button
+$txt-size-md3: 16px; // base size
+$txt-size-md4: 21px; // price
+$txt-size-md5: 28px; // headline
+$txt-size-md6: 38px; // lg headline
+
+// large
+$txt-size-lg1: 13px; // small text
+$txt-size-lg2: 14px; // button
+$txt-size-lg3: 16px; // base size (not used)
+$txt-size-lg4: 21px; // price
+$txt-size-lg5: 38px; // headline
+$txt-size-lg6: 51px; // lg headline
