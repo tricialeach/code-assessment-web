@@ -1,6 +1,18 @@
 import shop from '../api/shop'
 import * as types from '../constants/ActionTypes'
 
+export function getNewProducts(products) {
+  return async function(dispatch) {
+    const res = await fetch('http://tech.work.co/shopping-cart/products.json')
+    const newProducts = await res.json()
+    console.log(newProducts)
+    return dispatch({
+      type: types.GET_NEW_PRODUCTS,
+      products: newProducts
+    })
+  }
+}
+
 const receiveProducts = products => ({
   type: types.RECEIVE_PRODUCTS,
   products: products
@@ -8,7 +20,8 @@ const receiveProducts = products => ({
 
 export const getAllProducts = () => dispatch => {
   shop.getProducts(products => {
-    dispatch(receiveProducts(products))
+    //dispatch(receiveProducts(products))
+    dispatch(getNewProducts(products))
   })
 }
 
