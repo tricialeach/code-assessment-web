@@ -5,8 +5,8 @@ import Product from './Product'
 const ProductItem = ({ product, onAddToCartClicked }) => (
   <div style={{ marginBottom: 20 }}>
     <Product
-      title={product.title}
-      price={product.price}
+      title={product.productTitle}
+      price={product.price.value}
       inventory={product.inventory} />
     <button
       onClick={onAddToCartClicked}

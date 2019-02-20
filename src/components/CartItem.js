@@ -9,8 +9,8 @@ const CartItem = ({ product, onRemoveItemClicked, onIncrementClicked, onDecremen
     <div style={{ marginBottom: 20 }}>
       <Product
         productId={product.id}
-        title={product.title}
-        price={product.price}
+        title={product.productTitle}
+        price={product.price.value}
         quantity={product.quantity}
         key={product.id} />
       <button
