@@ -6,21 +6,45 @@
   @include chivo();
   letter-spacing: 1px;
   text-transform: uppercase;
-  border-radius: 50px;
-  padding: 15px 25px;
+  border-radius: $btn-border-radius;
+  padding: 1rem 1.5rem;
   transition: $link-transition;
   min-width: 150px;
   @include mq-md() {
     font-size: 14px;
   }
-}
-
-.btn:hover {
-  background-color: $dark-blue;
-  cursor: pointer;
-  transition: $link-transition;
-}
-
-.btn:disabled {
-  background-color: $blue-disabled;
+  &:hover {
+    background-color: $dark-blue;
+    cursor: pointer;
+    transition: $link-transition;
+  }
+  &:disabled {
+    background-color: $blue-disabled;
+    cursor: default;
+  }
+  &.btn-quantity {
+    min-width: 95px;
+    @include txt-size-3();
+    background-color: $gray-btn;
+    color: $gray-btn-text;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+    &:disabled {
+      background-color: $gray-btn-disabled;
+      color: $gray-btn-text-disabled;
+      cursor: default;
+    }
+  }
+  &.btn-left {
+    border-radius: 0;
+    border-top-left-radius: $btn-border-radius;
+    border-bottom-left-radius: $btn-border-radius;
+  }
+  &.btn-right {
+    border-radius: 0;
+    border-top-right-radius: $btn-border-radius;
+    border-bottom-right-radius: $btn-border-radius;
+  }
 }

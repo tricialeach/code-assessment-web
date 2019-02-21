@@ -4,9 +4,13 @@ $white: rgba(255,255,255,1);
 $black: rgba(41,41,41,1);
 $gray: rgba(155,155,155,1);
 $light-gray: rgba(245,245,245,1);
-$lightest-gray: rgba(249,249,249,1);
+
 $gray-border-color: rgba(216,216,216,1);
 $gray-bg-color: rgba(220,222,224,1);
+$gray-btn: rgba(237,237,237,1);
+$gray-btn-disabled: rgba(249,249,249,1);
+$gray-btn-text: rgba(142,147,156,1);
+$gray-btn-text-disabled: rgba(222,222,222,1);
 
 $dark-blue: rgba(64,127,192,1);
 $blue: rgba(94,151,209,1);
@@ -54,5 +58,8 @@ $fast: 0.175s;
 $link-transition: all $regular linear;
 
 // BORDERS
-$gray-border: 1px solid $gray-border-color
+$gray-border: 1px solid $gray-border-color;
+
+// MISC
+$btn-border-radius: 50px;
 

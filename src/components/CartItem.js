@@ -1,5 +1,6 @@
 import React from 'react'
 import Product from './Product'
+import ProductImage from './ProductImage'
 import '../styles/style.css';
 
 const CartItem = ({ product, onRemoveItemClicked, onIncrementClicked, onDecrementClicked }) => {
@@ -7,34 +8,38 @@ const CartItem = ({ product, onRemoveItemClicked, onIncrementClicked, onDecremen
   const quantityInCart = product.quantity > 0 ? true : false
 
   return (
-    <div style={{ marginBottom: 20 }}>
-      <Product
-        productId={product.id}
-        title={product.productTitle}
-        price={product.price.value}
-        quantity={product.quantity}
-        key={product.id} />
-      <button
-        onClick={onRemoveItemClicked}
-      >
-        Remove
-      </button>
-      <div>
-        <button
-          onClick={onDecrementClicked}
-          disabled={quantityInCart ? '' : 'disabled'}
-        >
-          -
-        </button>
-        <span>
-          {product.quantity}
+    <div className="product-wrapper">
+      <ProductImage title={product.productTitle} />
+      <div className="product-details-wrapper">
+        <Product
+          productId={product.id}
+          title={product.productTitle}
+          price={product.price.value}
+          quantity={product.quantity}
+          key={product.id} />
+        <span
+          className="remove-button"
+          onClick={onRemoveItemClicked}>
+          Remove
         </span>
-        <button
-          onClick={onIncrementClicked}
-          disabled={hasInventory ? '' : 'disabled'}
-        >
-          +
-        </button>
+        <div className="quantity-adjustment">
+          <button
+            className="btn btn-quantity btn-left"
+            onClick={onDecrementClicked}
+            disabled={quantityInCart ? '' : 'disabled'}>
+            &ndash;
+          </button>
+          <span className="product-quantity">
+            {product.quantity}
+          </span>
+          <button
+            className="btn btn-quantity btn-right"
+            onClick={onIncrementClicked}
+            disabled={hasInventory ? '' : 'disabled'}
+            >
+            +
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -5,15 +5,23 @@ import '../styles/style.css';
 const Cart  = ({ products, total, onCheckoutClicked, children, onCartCloseClicked, isActive }) => {
   const hasProducts = products.length > 0
   const nodes = hasProducts ? (
-    <div>
-      <div>{children}</div>
-      <p>Subtotal: &#36;{total}</p>
-      <p>Taxes: TBD</p>
-      <p>Total: &#36;{total}</p>
-      <button onClick={onCheckoutClicked}
-        disabled={hasProducts ? '' : 'disabled'}>
-        Checkout
-      </button>
+    <div className="active-cart-wrapper">
+      {children}
+      <div className="checkout-wrapper">
+        <div className="totals-wrapper">
+          <span className="heading">Subtotal</span><span className="price">&#36;{total}</span>
+          <span className="heading">Taxes</span><span className="price">TBD</span>
+        </div>
+        <div className="totals-wrapper">
+          <span className="heading">Total</span><span className="price">&#36;{total}</span>
+        </div>
+        <button 
+          className="btn"
+          onClick={onCheckoutClicked}
+          disabled={hasProducts ? '' : 'disabled'}>
+          Checkout
+        </button>
+      </div>
     </div>
   ) : (
     <div className="empty-cart-wrapper">
@@ -29,7 +37,7 @@ const Cart  = ({ products, total, onCheckoutClicked, children, onCartCloseClicke
           onClick={onCartCloseClicked}
           className="cart-close-icon" id="cart-close-icon" data-name="Close Cart" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><title>close-x</title><g id="v2"><g id="Desktop-Copy-2"><g id="Group"><path id="Line-3" d="M1.714,1.714,30.658,30.658" fill="none" stroke="#9b9b9b"/><path id="Line-3-2" data-name="Line-3" d="M29,2,1,31" fill="none" stroke="#9b9b9b" /></g></g></g></svg>
         <h2 className="cart-header txt-chivo-bold txt-size-5">Your cart</h2>
-        <div>{nodes}</div>
+        {nodes}
       </div>
     </div>
   )

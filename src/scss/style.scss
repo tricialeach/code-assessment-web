@@ -15,6 +15,13 @@
 @import 'components/cart';
 @import 'components/buttons';
 
+html {
+  font-size: 14px;
+  @include mq-md() {
+    font-size: 16px;
+  }
+}
+
 body {
   background-color: $light-gray;
   color: $black;

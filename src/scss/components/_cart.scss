@@ -48,8 +48,43 @@
     padding-bottom: 15px;
     border-bottom: $gray-border;
   }
-
 }
+
+// ACTIVE CART (WITH PRODUCTS)
+
+.active-cart-wrapper {
+  margin-top: 1.5rem;
+
+  .cart-product-wrapper {
+    display: flex;
+  }
+}
+
+// CHECKOUT
+
+.checkout-wrapper {
+  @include txt-size-3();
+
+  .totals-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: $gray-border;
+    padding-top: 2rem;
+    span {
+      width: 50%;
+      margin-bottom: 2rem;
+    }
+    .heading {
+      @include chivo();
+    }
+    .price {
+      @include chivo-light();
+      text-align: right;
+    }
+  }
+}
+
+// EMPTY CART
 
 .empty-cart-wrapper {
   text-align: center;
