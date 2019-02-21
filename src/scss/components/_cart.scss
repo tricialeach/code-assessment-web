@@ -32,7 +32,7 @@
     max-width: $max-width;
     min-height: 40%;
     padding: 5%;
-    overflow-y: scroll;
+    overflow-y: auto;
     @include mq-lg() {
       border-radius: 14px;
       -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.17);

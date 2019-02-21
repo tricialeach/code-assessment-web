@@ -354,7 +354,7 @@ a:hover {
     max-width: 1300px;
     min-height: 40%;
     padding: 5%;
-    overflow-y: scroll; }
+    overflow-y: auto; }
     @media (min-width: 950px) {
       .cart-wrapper .cart-contents {
         border-radius: 14px;
