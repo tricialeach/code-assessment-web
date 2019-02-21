@@ -26,11 +26,15 @@ body {
   background-color: $light-gray;
   color: $black;
   @include helvetica-neue();
+  overflow-x: hidden;
 }
 
 .container {
-  width: 90%;
+  width: 94%;
   max-width: 1300px;
   margin: auto;
   margin-bottom: 70px;
+  @include mq-md() {
+    width: 90%;
+  }
 }

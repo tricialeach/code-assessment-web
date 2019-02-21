@@ -15,7 +15,7 @@ const ProductItem = ({ product, onAddToCartClicked }) => {
           title={product.productTitle}
           price={product.price.value}
           inventory={product.inventory} />
-        <div>
+        <div className="add-to-cart-wrapper">
           <button
             className="btn"
             onClick={onAddToCartClicked}

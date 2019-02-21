@@ -35,12 +35,22 @@
     }
   }
 
+  .add-to-cart-wrapper {
+    margin: 3rem 0 1rem 0;
+    @include mq-md() {
+      margin: 0;
+    }
+  }
+
   .product-title-price {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; // keep this way so price is aligned at top for long titles
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    @include mq-md() {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .product-title {

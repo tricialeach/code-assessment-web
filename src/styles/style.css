@@ -241,12 +241,20 @@ a:hover {
     @media (min-width: 950px) {
       .product-wrapper .product-details-wrapper {
         padding: 4% 6% 4% 4%; } }
+  .product-wrapper .add-to-cart-wrapper {
+    margin: 3rem 0 1rem 0; }
+    @media (min-width: 675px) {
+      .product-wrapper .add-to-cart-wrapper {
+        margin: 0; } }
   .product-wrapper .product-title-price {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1rem; }
+    @media (min-width: 675px) {
+      .product-wrapper .product-title-price {
+        margin-bottom: 1.5rem; } }
   .product-wrapper .product-title {
     font-family: 'Chivo', sans-serif;
     font-size: 21px; }
@@ -444,10 +452,14 @@ html {
 body {
   background-color: whitesmoke;
   color: #292929;
-  font-family: 'Helvetica Neue', sans-serif; }
+  font-family: 'Helvetica Neue', sans-serif;
+  overflow-x: hidden; }
 
 .container {
-  width: 90%;
+  width: 94%;
   max-width: 1300px;
   margin: auto;
   margin-bottom: 70px; }
+  @media (min-width: 675px) {
+    .container {
+      width: 90%; } }
