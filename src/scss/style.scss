@@ -31,7 +31,7 @@ body {
 
 .container {
   width: 94%;
-  max-width: 1300px;
+  max-width: $max-width;
   margin: auto;
   margin-bottom: 70px;
   @include mq-md() {
