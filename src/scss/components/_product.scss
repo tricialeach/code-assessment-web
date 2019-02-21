@@ -1,22 +1,66 @@
 .product-wrapper {
   background-color: $white;
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  @include mq-md() {
+    margin-bottom: 1.5rem;
+    flex-wrap: nowrap;
+  }
+  @include mq-lg() {
+    margin-bottom: 2rem;
+  }
 
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .product-image-wrapper,
   .product-details-wrapper {
     width: 100%;
-    padding: 30px 60px 30px 40px;
+    @include mq-md() {
+      width: 50%;
+    }
+  }
+
+  .product-details-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 2rem 4rem 2rem 3rem;
+    padding: 4%;
+    @include mq-lg() {
+      padding: 4% 6% 4% 4%;
+    }
   }
 
   .product-title-price {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; // keep this way so price is aligned at top for long titles
     width: 100%;
     margin-bottom: 1.5rem;
+  }
+
+  .product-title {
+    @include chivo();
+    @include txt-size-5();
+  }
+
+  .product-price {
+    position: relative;
+    top: 5px;
+    @include chivo-light();
+    @include txt-size-4();
+  }
+
+  .product-remaining {
+    position: relative;
+    left: 2px; // nudge to left so it looks visually aligned
+    @include txt-size-1();
+    @include txt-gray();
+    text-transform: uppercase;
   }
 
   .remove-button {
@@ -27,6 +71,7 @@
     }
   }
 
+  // so + quantity - buttons don't break up
   .quantity-adjustment {
     white-space: nowrap;
   }

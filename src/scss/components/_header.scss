@@ -1,8 +1,25 @@
 .header-wrapper {
-  margin: 60px 0 30px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-bottom: $gray-border;
+  padding-bottom: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  @include mq-md() {
+    margin: 4rem 0 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include mq-lg() {
+    margin: 4rem 0 2rem 0;
+  }
+
+  .heading {
+    @include chivo-bold();
+    @include txt-size-6();
+    margin-bottom: .75rem;
+    @include mq-md() {
+      margin-bottom: 0;
+    }
+  }
 
   .cart-link-text {
     position: relative;

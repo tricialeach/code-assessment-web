@@ -11,7 +11,7 @@ const Header = ({ title, cart, onCartIconClicked }) => {
   }
   return (
     <header className="header-wrapper">
-      <h1 className="txt-chivo-bold txt-size-6"><a href="/">{title}</a></h1>
+      <h1 className="heading"><a href="/">{title}</a></h1>
       <div
         className="header-cart-link"
         onClick={onCartIconClicked}>
