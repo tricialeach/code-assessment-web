@@ -4,9 +4,33 @@
   justify-content: space-between;
   align-items: center;
 
-  .cart-text {
-    margin-left: 5px;
+  .cart-link-text {
     position: relative;
     top: -1px;
+    margin-left: 5px;
+    @include chivo();
+    @include txt-size-2();
+    transition: $link-transition;
   }
+
+  .header-cart-icon {
+    path {
+      transition: $link-transition;
+    }
+  }
+  
+  .header-cart-link:hover {
+    .header-cart-icon {
+      path {
+        fill: $blue;
+        transition: $link-transition;
+      }
+    }
+    .cart-link-text {
+      color: $blue;
+      cursor: pointer;
+      transition: $link-transition;
+    }
+  }
+
 }
