@@ -8,39 +8,41 @@ const CartItem = ({ product, onRemoveItemClicked, onIncrementClicked, onDecremen
   const quantityInCart = product.quantity > 0 ? true : false
 
   return (
-    <div className="product-wrapper">
-      <ProductImage 
-        product={product} />
-      <div className="product-details-wrapper">
-        <Product
-          productId={product.id}
-          title={product.productTitle}
-          price={product.price.value}
-          quantity={product.quantity}
-          key={product.id} />
-        <span
-          className="remove-button"
-          onClick={onRemoveItemClicked}>
-          Remove
-        </span>
-        <div className="quantity-adjustment">
-          <button
-            className="btn btn-quantity btn-left"
-            onClick={onDecrementClicked}
-            disabled={quantityInCart ? '' : 'disabled'}>
-            &ndash;
-          </button>
-          <span className="product-quantity">
-            {product.quantity}
+    <div className="cart-product-wrapper">
+      <div className="product-wrapper">
+        <ProductImage 
+          product={product} />
+        <div className="product-details-wrapper">
+          <Product
+            productId={product.id}
+            title={product.productTitle}
+            price={product.price.value}
+            quantity={product.quantity}
+            key={product.id} />
+          <span
+            className="remove-button"
+            onClick={onRemoveItemClicked}>
+            Remove
           </span>
-          <button
-            className="btn btn-quantity btn-right"
-            onClick={onIncrementClicked}
-            disabled={hasInventory ? '' : 'disabled'}
-            >
-            +
-          </button>
         </div>
+      </div>
+      <div className="quantity-adjustment">
+        <button
+          className="btn btn-quantity btn-left"
+          onClick={onDecrementClicked}
+          disabled={quantityInCart ? '' : 'disabled'}>
+          &ndash;
+        </button>
+        <span className="product-quantity">
+          {product.quantity}
+        </span>
+        <button
+          className="btn btn-quantity btn-right"
+          onClick={onIncrementClicked}
+          disabled={hasInventory ? '' : 'disabled'}
+          >
+          +
+        </button>
       </div>
     </div>
   )

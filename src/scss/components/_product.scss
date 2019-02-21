@@ -76,8 +76,12 @@
   .remove-button {
     @include txt-warning();
     @include txt-size-3();
+    text-align: left;
     &:hover {
       cursor: pointer;
+    }
+    @include mq-md() {
+      text-align: right;
     }
   }
 
@@ -85,18 +89,23 @@
   .quantity-adjustment {
     white-space: nowrap;
   }
+}
 
-  .product-quantity {
-    min-width: 95px;
-    display: inline-block;
-    text-align: center;
-    border-top: 2px solid $gray-btn;
-    border-bottom: 2px solid $gray-btn;
-    box-sizing: border-box;
+.product-quantity {
+  min-width: 95px;
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  border-top: 2px solid $gray-btn;
+  border-bottom: 2px solid $gray-btn;
+  box-sizing: border-box;
+  padding-top: 13px; // TODO: better way to handle this
+  padding-bottom: 14px; // TODO: better way to handle this
+  @include mq-md() {
+    width: auto;
     padding-top: 15px; // TODO: better way to handle this
     padding-bottom: 16px; // TODO: better way to handle this
   }
 }
-
 
 

@@ -1,5 +1,5 @@
 @mixin mq-sm {
-  @media (max-width: $sm) {
+  @media (max-width: $md) {
     @content;
   }
 }

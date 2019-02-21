@@ -24,6 +24,7 @@
   }
   &.btn-quantity {
     min-width: 95px;
+    width: 33%;
     @include txt-size-3();
     background-color: $gray-btn;
     color: $gray-btn-text;
@@ -36,6 +37,9 @@
       color: $gray-btn-text-disabled;
       cursor: default;
     }
+    @include mq-md() {
+      width: auto;
+    }
   }
   &.btn-left {
     border-radius: 0;
@@ -46,5 +50,15 @@
     border-radius: 0;
     border-top-right-radius: $btn-border-radius;
     border-bottom-right-radius: $btn-border-radius;
+  }
+}
+
+.btn-checkout {
+  @include mq-sm() {
+    border-radius: 0;
+    width: 100%;
+  }
+  @include mq-md() {
+    float: right;
   }
 }
