@@ -1,0 +1,64 @@
+.btn {
+  background-color: $blue;
+  color: $white;
+  border: 0;
+  font-size: 13px;
+  @include chivo();
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: $btn-border-radius;
+  padding: 1rem 1.5rem;
+  transition: $link-transition;
+  min-width: 150px;
+  @include mq-md() {
+    font-size: 14px;
+  }
+  &:hover {
+    background-color: $dark-blue;
+    cursor: pointer;
+    transition: $link-transition;
+  }
+  &:disabled {
+    background-color: $blue-disabled;
+    cursor: default;
+  }
+  &.btn-quantity {
+    min-width: 95px;
+    width: 33%;
+    @include txt-size-3();
+    background-color: $gray-btn;
+    color: $gray-btn-text;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+    &:disabled {
+      background-color: $gray-btn-disabled;
+      color: $gray-btn-text-disabled;
+      cursor: default;
+    }
+    @include mq-md() {
+      width: auto;
+    }
+  }
+  &.btn-left {
+    border-radius: 0;
+    border-top-left-radius: $btn-border-radius;
+    border-bottom-left-radius: $btn-border-radius;
+  }
+  &.btn-right {
+    border-radius: 0;
+    border-top-right-radius: $btn-border-radius;
+    border-bottom-right-radius: $btn-border-radius;
+  }
+}
+
+.btn-checkout {
+  @include mq-sm() {
+    border-radius: 0;
+    width: 100%;
+  }
+  @include mq-md() {
+    float: right;
+  }
+}
