@@ -9,7 +9,8 @@ const CartItem = ({ product, onRemoveItemClicked, onIncrementClicked, onDecremen
 
   return (
     <div className="product-wrapper">
-      <ProductImage title={product.productTitle} />
+      <ProductImage 
+        product={product} />
       <div className="product-details-wrapper">
         <Product
           productId={product.id}

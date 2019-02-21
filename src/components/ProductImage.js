@@ -1,9 +1,10 @@
 import React from 'react'
-import '../styles/style.css';
+import '../styles/style.css'
 
-const ProductImage = ({ title }) => {
+const ProductImage = ({ product }) => {
+  const imgSrc = '/img/image-' + product.id + '.jpg'
   return ( 
-    <img src="http://placekitten.com/450/275" alt="{title}"/>
+    <img src={process.env.PUBLIC_URL + imgSrc} alt={product.productTitle} />
   )
 }
 
