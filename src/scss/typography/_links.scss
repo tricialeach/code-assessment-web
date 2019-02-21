@@ -1,0 +1,10 @@
+a {
+  color: $black;
+  transition: color $regular linear;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $gray;
+  transition: color $regular linear;
+}

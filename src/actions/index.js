@@ -62,6 +62,20 @@ export const decrementQuantity = productId => (dispatch, getState) => {
   }
 }
 
+const toggleCart = (newStatus) => ({
+  type: types.DISPLAY_CART,
+  newStatus
+})
+
+export const displayCart = productId => (dispatch, getState) => {
+  const activeStatus = getState().cart.isActive
+  if (activeStatus) {
+    dispatch(toggleCart(false))
+  } else {
+    dispatch(toggleCart(true))
+  }
+}
+
 export const checkout = products => (dispatch, getState) => {
   const { cart } = getState()
 

@@ -4,12 +4,23 @@ import {
   INCREMENT_QUANTITY,
   DECREMENT_QUANTITY,
   CHECKOUT_REQUEST,
-  CHECKOUT_FAILURE
+  CHECKOUT_FAILURE,
+  DISPLAY_CART,
 } from '../constants/ActionTypes'
 
 const initialState = {
   addedIds: [],
-  quantityById: {}
+  quantityById: {},
+  isActive: false
+}
+
+const letsDisplayCart = (state, action) => {
+  switch (action.type) {
+    case DISPLAY_CART:
+      return state = action.newStatus
+    default:
+      return state
+  }
 }
 
 const addedIds = (state = initialState.addedIds, action) => {
@@ -64,7 +75,8 @@ const cart = (state = initialState, action) => {
     default:
       return {
         addedIds: addedIds(state.addedIds, action),
-        quantityById: quantityById(state.quantityById, action)
+        quantityById: quantityById(state.quantityById, action),
+        isActive: letsDisplayCart(state.isActive, action)
       }
   }
 }

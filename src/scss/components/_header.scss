@@ -1,0 +1,53 @@
+.header-wrapper {
+  border-bottom: $gray-border;
+  padding-bottom: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  @include mq-md() {
+    margin: 4rem 0 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include mq-lg() {
+    margin: 4rem 0 2rem 0;
+  }
+
+  .heading {
+    @include chivo-bold();
+    @include txt-size-6();
+    margin-bottom: .75rem;
+    @include mq-md() {
+      margin-bottom: 0;
+    }
+  }
+
+  .cart-link-text {
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
+    @include chivo();
+    @include txt-size-2();
+    transition: $link-transition;
+  }
+
+  .header-cart-icon {
+    path {
+      transition: $link-transition;
+    }
+  }
+  
+  .header-cart-link:hover {
+    .header-cart-icon {
+      path {
+        fill: $blue;
+        transition: $link-transition;
+      }
+    }
+    .cart-link-text {
+      color: $blue;
+      cursor: pointer;
+      transition: $link-transition;
+    }
+  }
+
+}
